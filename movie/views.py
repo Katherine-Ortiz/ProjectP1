@@ -10,4 +10,4 @@ def home(request):
 
 
 def about(request):
-    return render(request,'home.html', {'name' : 'Katherine Benjumea'})
+    return render(request,'about.html', {'name' : 'Katherine Benjumea'})
