@@ -7,15 +7,20 @@
 </head>
 
 <body>
+    {% extends 'base.html' %}
+    {% block content %}
     <div class="container mt-5">
         <h1 class="mb-3 display-6">Upcoming...</h1>
         <div id="movieCarousel" class="carousel slide mb-3" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <image src="https://cartelescine.files.wordpress.com/2023/07/afteraquiacabatodobanner.jpg?w=1200" class="d-block w-100" alt="Movie 1">
+                    <image src="https://cartelescine.files.wordpress.com/2023/07/afteraquiacabatodobanner.jpg?w=1200"
+                        class="d-block w-100" alt="Movie 1">
                 </div>
                 <div class="carousel-item">
-                    <image src="https://www.ageratingjuju.com/wp-content/uploads/2023/06/Retribution-Parents-Guide-2-1200x675.webp" class="d-block w-100" alt="Movie 2">
+                    <image
+                        src="https://www.ageratingjuju.com/wp-content/uploads/2023/06/Retribution-Parents-Guide-2-1200x675.webp"
+                        class="d-block w-100" alt="Movie 2">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#movieCarousel" role="button" data-slide="prev">
@@ -63,12 +68,15 @@
             <br />
             <br />
         </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<script>
-    $('.carousel').carousel();
-</script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script>
+            $('.carousel').carousel();
+        </script>
+        {% endblock content %}
+</body>
 
 </html>

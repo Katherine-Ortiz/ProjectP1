@@ -3,23 +3,29 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
-<div class="container">
-    <h1 class="text-center">Página de Noticias</h1>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
 
-<div class="container">
-    {% for news in newss %}
-    <div class="card mb-3">
-        <div class="rpw g-0">
-            <div>
-                <div class="card-body">
-                    <h5 class="card-title">{{ news.headline }}</h5>
-                    <p class="card-text">{{ news.body }}</p>
-                    <p class="card-text"><small class="text-muted">
-                        {{ news.date }}
-                    </small></p>
+    <div class="container">
+        <h1 class="text-center">Página de Noticias</h1>
+
+        <div class="container">
+            {% for news in newss %}
+            <div class="card mb-3">
+                <div class="rpw g-0">
+                    <div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ news.headline }}</h5>
+                            <p class="card-text">{{ news.body }}</p>
+                            <p class="card-text"><small class="text-muted">
+                                    {{ news.date }}
+                                </small></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-    </div>
-    {% endfor %}
-</div>
+        {% endblock content %}
+</body>
